@@ -9,7 +9,7 @@
 #include <string.h>
 #include "wrap.h"
 
-#define SERV_PORT 7777
+#define SERV_PORT 6666
 
 struct c_info
 {
@@ -51,6 +51,7 @@ void *do_work(void *arg)
 int main(void)
 {
     int lfd, cfd;
+
 	struct c_info ts[128];
 	memset(ts,0,sizeof(ts));
     struct sockaddr_in serv_addr, clie_addr;

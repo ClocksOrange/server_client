@@ -3,7 +3,7 @@
 #include <unistd.h>
 #include <errno.h>
 #include <sys/socket.h>
-#include  "wrap.h"
+
 
 void perr_exit(const char *s)
 {
@@ -46,6 +46,7 @@ int Connect(int fd, const struct sockaddr *sa,
 	{perr_exit("connect error");	}
 	return n;
 }
+
 int Listen(int fd, int backlog)
 {
     int n;

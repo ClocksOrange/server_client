@@ -36,11 +36,19 @@ int Bind(int fd, const struct sockaddr *sa, socklen_t salen)
 
 
 int Connect(int fd, const struct sockaddr *sa,
+<<<<<<< HEAD
                    socklen_t addrlen);
 
 {
 	int n;
 	connect(fd,sa,addrlen);
+=======
+                   socklen_t addrlen)
+
+{
+	int n;
+	n = connect(fd,sa,addrlen);
+>>>>>>> origin/master
 	if(n<0)
 	{perr_exit("connect error");	}
 	return n;

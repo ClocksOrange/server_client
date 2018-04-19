@@ -5,17 +5,15 @@
 #include<arpa/inet.h>
 #include<string.h>
 #include<ctype.h>
-#include <netinet/in.h>
-#include <signal.h>
-#include <sys/wait.h>
+
 #include "wrap.h"
 #define SERV_IP "127.0.0.1"
 #define SERV_PORT 6666
-int main(void)
+int main()
 {
 	int cfd;
 	char buf[BUFSIZ];
-	int n;
+	 int n;
 	struct sockaddr_in serv_addr;
 	//socklen_t serv_addr_len;	
 	cfd= Socket(AF_INET,SOCK_STREAM,0);
@@ -40,6 +38,7 @@ printf("the other side has ben closed.\n");break	;
 		else
 	
 			Write(STDOUT_FILENO,buf,n);	
+
 	}
 	
 	close(cfd);
